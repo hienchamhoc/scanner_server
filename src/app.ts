@@ -1,6 +1,6 @@
-import express, {Request, Response} from 'express';
+import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import {config} from "./config/config";
+import { config } from "./config/config";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ config(app).then(() => {
     console.log("Config successfully.")
 });
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/api', (req: Request, res: Response) => {
     res.send('Tinggg!');
 });
 
